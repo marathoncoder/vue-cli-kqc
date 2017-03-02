@@ -1,0 +1,23 @@
+{
+  "name": "vue-2-cli",
+  "description": "A Vue.js project",
+  "main": "",
+  "authors": [
+    "胡卫亮 <>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower_components",
+    "src/assets/js",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "vue": "^2.2.1"
+  }
+}
