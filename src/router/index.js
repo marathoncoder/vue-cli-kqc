@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import todos from '@/components/todos'
+import todo from '@/components/todo'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: Hello
-    }
-  ]
+    mode: 'history',
+    routes: [
+	    {
+	        path: '/',
+	        name: 'todos',
+	        component: todos
+	    },
+	    {
+	        path: '/todo/:id',
+	        component: todo
+	    }
+    ]
 })

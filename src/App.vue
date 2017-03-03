@@ -1,13 +1,27 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
+    <todos v-bind:todos="todos"></todos>
+    <todos-form :todos="todos"></todos-form>
   </div>
 </template>
 
 <script>
+import todos from './components/todos'
+import todosForm from './components/todosForm'
+
 export default {
-  name: 'app'
+  name: 'app',
+  data(){
+    return {
+        todos: [
+            {id: 1, title: 'learn vuejs', complate: false}
+        ]
+    }
+  },
+  components: {
+    todos, todosForm
+  }
 }
 </script>
 
