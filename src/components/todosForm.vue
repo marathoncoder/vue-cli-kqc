@@ -1,5 +1,5 @@
 <template>
-	<form v-on:submit.prevent="addTodo(newTodo)">
+	<form v-on:submit="addTodo(newTodo)">
 		<div class="form-group">
 			<input class="form-control" placeholder="add new todo" v-model="newTodo.title"/>
 		</div>
@@ -9,16 +9,14 @@
 
 <script type="text/javascript">
 	export default {
-		props: ['todos'], 
-		data(){
-			return {
-				newTodo: { id: null, title: '', complate: false }
+		computed: {
+			newTodo(){
+				return this.$store.state.todo
 			}
 		},
 		methods: {
-			addTodo(newTodo){
-				this.todos.push(newTodo)
-				this.newTodo = { id: null, title: '', complate: false }
+			addTodo(todo){
+				this.$store.dispatch('createTodo', todo)
 			}
 		}
 	}

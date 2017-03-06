@@ -15,6 +15,7 @@ export default new Router({
 	    },
 	    {
 	        path: '/todo/:id',
+	        name: 'todo',
 	        component: todo
 	    }
     ]
